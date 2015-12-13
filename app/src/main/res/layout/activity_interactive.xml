@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_margin="10sp"
+        android:hint="Name"
+        android:ems="10"
+        android:textColor="#4689C8"
+        android:id="@+id/edtName" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_text_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:text="TOPPING"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+
+            <CheckBox
+                android:id="@+id/cbxwhip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Whipped cream (+ 2$/c)"
+                android:textColor="#4689C8"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:checked="true"
+                android:onClick="checkWhip"
+
+                />
+            <CheckBox
+                android:id="@+id/cbxchoco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Chocolate (+ 3$/c)"
+                android:textColor="#4689C8"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:checked="true"
+                android:onClick="checkChoco"
+
+                />
+
+            <TextView
+                android:id="@+id/title_text_quantity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:text="QUANTITY"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                android:layout_margin="10sp">
+
+                <Button
+                    android:id="@+id/btnSubtract"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:id="@+id/txtNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:text="0"
+                    android:textColor="#4689C8"
+                    android:textSize="80sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="+"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="50sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title_text_price"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:text="PRICE"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10sp"
+                android:text="0"
+                android:textColor="#4689C8"
+                android:textSize="80sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnOrder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_dark"
+                android:onClick="submitOrder"
+                android:text="Order"
+                android:textSize="50sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
