@@ -6,16 +6,13 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.NumberFormat;
-import java.util.Calendar;
 
 public class Interactive extends AppCompatActivity {
 
@@ -105,7 +102,7 @@ public class Interactive extends AppCompatActivity {
 
     public void submitOrder(View view) {
         final Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.custom_dialog);
+        dialog.setContentView(R.layout.order_info_dialog);
         dialog.setTitle("Order Infomation");
 
         TextView text = (TextView) dialog.findViewById(R.id.txtInfo);

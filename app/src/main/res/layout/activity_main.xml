@@ -1,38 +1,40 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:src="@drawable/background"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash1"
+        android:layout_marginBottom="80sp"/>
 
-    <TextView
-        android:gravity="center"
-        android:text="Happy Birthday"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:background="#212121"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        android:textColor="#ddd"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="50dp"
-        />
+        android:orientation="horizontal">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Interactive"
-        android:id="@+id/btnInteractive"
-        android:onClick="toInteractive"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="240dp" />
+        <Button
+            android:id="@+id/btnInteractive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:layout_weight="1"
+            android:background="#00eef4"
+            android:onClick="toInteractive"
+            android:text=" ORDER " />
 
-
+        <Button
+            android:id="@+id/btnInfo"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:background="#f4f4f4"
+            android:text=" Infomation " />
+    </LinearLayout>
 </RelativeLayout>
