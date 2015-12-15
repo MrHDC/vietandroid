@@ -19,7 +19,6 @@ public class Interactive extends AppCompatActivity {
     TextView txtnum;
     Button btnAdd, btnSubtract;
     CheckBox cbxWhip, cbxChoco;
-    EditText edtName;
     int dongia = 5;
 
     private boolean longClickActive = false;
@@ -34,7 +33,6 @@ public class Interactive extends AppCompatActivity {
         txtnum = (TextView) findViewById(R.id.txtNum);
         cbxWhip = (CheckBox) findViewById(R.id.cbxwhip);
         cbxChoco = (CheckBox) findViewById(R.id.cbxchoco);
-        edtName = (EditText) findViewById(R.id.edtName);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +106,9 @@ public class Interactive extends AppCompatActivity {
         TextView text = (TextView) dialog.findViewById(R.id.txtInfo);
         text.setText(getOrderInfo());
 
+        final EditText edtName = (EditText) dialog.findViewById(R.id.edtName);
+        final EditText edtMail = (EditText) dialog.findViewById(R.id.edtMail);
+
         Button dialogButtonOk = (Button) dialog.findViewById(R.id.dialogButtonOK);
         dialogButtonOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,7 +116,7 @@ public class Interactive extends AppCompatActivity {
                 dialog.dismiss();
                 String dear = "Dear " + edtName.getText() + "," + "\nHere is your order infomation\n\n";
                 String thanks = "\n\nThanks for choosing our service!";
-                composeEmail(new String[]{""}, "Order Infomation", dear + getOrderInfo() + thanks);
+                composeEmail(new String[]{edtMail.getText().toString()}, "Order Infomation", dear + getOrderInfo() + thanks);
             }
         });
 
@@ -142,16 +143,14 @@ public class Interactive extends AppCompatActivity {
     }
 
     private String getOrderInfo() {
-        String info = "Cus: " + (edtName.getText().length()==0?"Customer69":edtName.getText())
-                + "\nAdd: " + (cbxWhip.isChecked()?"Cream, ":"") + (cbxChoco.isChecked()?"Chocolate":"") + (!cbxWhip.isChecked() && !cbxChoco.isChecked()?"None":"")
-                + "\nNum: " + txtnum.getText() + " cup"
-                + "\nTotal: " + ((TextView) findViewById(R.id.txtPrice)).getText().toString();
+        String info = "".concat("Number: " + txtnum.getText() + " cup")
+                .concat("\nAdditional: " + (cbxWhip.isChecked()?"Cream, ":"") + (cbxChoco.isChecked()?"Chocolate":"") + (!cbxWhip.isChecked() && !cbxChoco.isChecked()?"None":""))
+                .concat("\nTotal: " + ((TextView) findViewById(R.id.txtPrice)).getText().toString());
         return info;
     }
 
     public void display(int x) {
-        TextView quantityTextView = (TextView) findViewById(
-                R.id.txtNum);
+        TextView quantityTextView = (TextView) findViewById(R.id.txtNum);
         quantityTextView.setText("" + x);
     }
 

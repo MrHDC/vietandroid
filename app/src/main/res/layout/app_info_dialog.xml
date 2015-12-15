@@ -1,42 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:id="@+id/rl"
-    >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="400dp"
-    >
-
-    <ImageView
-        android:id="@+id/imgInfo"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background" />
-    <TextView
-        android:layout_alignParentRight="true"
-        android:layout_alignParentLeft="true"
-        android:background="#fff"
-        android:padding="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="30sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="16dp"
-        android:text="Author: Hoàng Đình Công\nEmail: hodico.iam@gmail.com\nPhone:0169 573 6655\nClass: Room4 (p. B14)\nMentor: Phan Hoàng Tích\nBatch 2 Room 4 (p.B14)"
-        android:id="@+id/textView" />
-    </RelativeLayout>
-
-    <Button
-        android:id="@+id/dialogBtnOk"
+    <LinearLayout
+        android:id="@+id/rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OK"
-        android:textSize="30sp" />
+        android:orientation="vertical">
 
-</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <ImageView
+                android:id="@+id/imgInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="30sp"
+                android:background="#fff"
+                android:padding="10dp"
+                android:text="Author: Hoàng Đình Công\nEmail: hodico.iam@gmail.com\nPhone:0169 573 6655\nClass: Room4 (p. B14)\nMentor: Phan Hoàng Tích\nBatch 2 Room 4 (p.B14)"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/dialogBtnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+</ScrollView>

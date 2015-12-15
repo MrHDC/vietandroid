@@ -3,17 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_margin="10sp"
-        android:hint="Name"
-        android:ems="10"
-        android:textColor="#4689C8"
-        android:id="@+id/edtName" />
-
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="fill_parent"
@@ -32,7 +21,8 @@
                 android:gravity="center"
                 android:text="TOPPING"
                 android:textColor="#fff"
-                android:textSize="40dp"
+                android:textSize="30dp"
+                android:padding="5sp"
                 android:textStyle="bold" />
 
 
@@ -73,7 +63,8 @@
                 android:gravity="center"
                 android:text="QUANTITY"
                 android:textColor="#fff"
-                android:textSize="40dp"
+                android:textSize="30dp"
+                android:padding="5sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -123,7 +114,8 @@
                 android:gravity="center"
                 android:text="PRICE"
                 android:textColor="#fff"
-                android:textSize="40dp"
+                android:textSize="30dp"
+                android:padding="5sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -141,8 +133,9 @@
                 android:id="@+id/btnOrder"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
+                android:background="#00eef4"
                 android:onClick="submitOrder"
+                android:padding="10sp"
                 android:text="Order"
                 android:textSize="50sp" />
 

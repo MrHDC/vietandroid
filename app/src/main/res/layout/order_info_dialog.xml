@@ -1,57 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="10dp"
-        android:layout_marginRight="5dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/android_cafe" />
-
-    <TextView
-        android:id="@+id/txtInfo"
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/image"
-        android:text="KH: Hoang Cong .......... KH: Hoang Cong .......... KH: Hoang Cong .......... KH: Hoang Cong .........."
-        android:textColor="#444"
-        android:textSize="16sp" />
+        android:layout_height="fill_parent">
 
-    <LinearLayout
-        android:layout_below="@id/image"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:id="@+id/dialogButtonOK"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="70dp"
-            android:textSize="30sp"
-            android:background="@android:color/holo_blue_dark"
-            android:layout_below="@+id/image"
-            android:text=" Send " />
+            android:layout_marginRight="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/android_cafe" />
 
-        <Button
-            android:layout_margin="10dp"
-            android:id="@+id/dialogButtonCancel"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="70dp"
-            android:textSize="30sp"
-            android:background="@android:color/background_light"
-            android:layout_below="@+id/image"
-            android:text=" Cancel " />
-    </LinearLayout>
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/image"
+            android:text="KH: Hoang Cong .......... KH: Hoang Cong .......... KH: Hoang Cong .......... KH: Hoang Cong .........."
+            android:textColor="#444"
+            android:textSize="16sp" />
 
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/llInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:background="#212121"
+            android:orientation="vertical"
+            android:paddingBottom="10sp"
+            android:paddingTop="10sp">
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="#fff"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:padding="10sp" />
+
+            <EditText
+                android:id="@+id/edtMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="#fff"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llInfo"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dialogButtonOK"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#00eef4"
+                android:text=" Send "
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/dialogButtonCancel"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:text=" Cancel "
+                android:textSize="30sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
